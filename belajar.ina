@@ -1,0 +1,10 @@
+isi lib="./lib.inadl";
+isi data={
+UnicodeKarakter:ffi("int unicodeChar(char*)",lib),
+HurufBesar:(ffi("int hurufBesar(char*)",lib))?benar:salah,
+HurufKecil:(ffi("int hurufKecil(char*)",lib))?benar:salah,
+
+};
+tulis(data.UnicodeKarakter("a"));
+tulis(data.HurufBesar("a"));
+tulis(data.HurufKecil("a"));
